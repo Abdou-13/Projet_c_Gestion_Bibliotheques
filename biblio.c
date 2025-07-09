@@ -1,3 +1,4 @@
+
 void afficherStatistiques() {
     system("cls");
     system("color 6");
@@ -16,7 +17,8 @@ void afficherStatistiques() {
     printf("Livres disponibles: %d\n", totalLivres - livresEmpruntes);
     printf("Nombre total d'emprunts enregistres: %d\n", bibliotheque.nombreEmprunts);
 
-    puts("");
-    system("pause");
+     system("pause");
     system("cls");
 }
+=======
+ 
