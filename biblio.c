@@ -1,32 +1,20 @@
-
-int supprimerLivre() {
+void afficherLivres() {
     system("cls");
-    system("color 5");
-    int isbn;
-    printf("Entrez le code ISBN du livre à supprimer: ");
-    scanf("%d", &isbn);
-    getchar();
-
-    int index = -1;
-
+    system("color B");
+   int trouves = 0;
+    printf("\n=== Livres disponibles ===\n");
     for (int i = 0; i < bibliotheque.nombreLivres; i++) {
-        if (bibliotheque.livres[i].ISBN == isbn) {
-            index = i;
-            break;
+        if (!bibliotheque.livres[i].estEmprunte) {
+            printf("%d. %s - %s (%d) [ISBN: %d]\n",
+                   i + 1,
+                   bibliotheque.livres[i].titre,
+                   bibliotheque.livres[i].auteur,
+                   bibliotheque.livres[i].anneePublication,
+                   bibliotheque.livres[i].ISBN);
+            trouves++;
         }
     }
+    if (trouves == 0)
+        printf("Aucun livre disponible.\n");
 
-    if (index == -1) {
-        printf("Aucun livre trouve.\n");
-        return 0;
-    }
-
-    for (int i = index; i < bibliotheque.nombreLivres - 1; i++) {
-        bibliotheque.livres[i] = bibliotheque.livres[i + 1];
-    }
-
-    bibliotheque.nombreLivres--;
-    printf("Livre supprime.\n");
-    return 1;
-
- 
+  
