@@ -1,10 +1,3 @@
- #include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
-#define MAX_LIVRES 100
-#define MAX_CHAR 100
-#define MAX_EMPRUNTS 100
-   
 int gererEmprunt() {
     int choix;
     printf("\nGestion des emprunts:\n");
