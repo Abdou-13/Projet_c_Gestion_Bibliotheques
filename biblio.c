@@ -49,7 +49,7 @@ void afficherMenu() {
 }
 void enregistrerLivre() {
     if (bibliotheque.nombreLivres >= MAX_LIVRES) {
-        printf("La bibliothèque est pleine!\n");
+        printf("La bibliotheque est pleine!\n");
         return;
     }
 
@@ -77,7 +77,7 @@ void enregistrerLivre() {
     nouveauLivre.estEmprunte = false;
 
     bibliotheque.livres[bibliotheque.nombreLivres++] = nouveauLivre;
-    printf("Livre ajouté avec succès!\n");
+    printf("Livre ajoute avec succès!\n");
 }
 
 void afficherLivres() {
@@ -111,7 +111,7 @@ void rechercherLivre() {
     fgets(terme, MAX_CHAR, stdin);
     terme[strcspn(terme, "\n")] = 0;
 
-    printf("\n=== Résultats de recherche ===\n");
+    printf("\n=== Resultats de recherche ===\n");
     int trouve = 0;
 
     for (int i = 0; i < bibliotheque.nombreLivres; i++) {
@@ -157,7 +157,7 @@ int supprimerLivre() {
     }
 
     bibliotheque.nombreLivres--;
-    printf("Livre supprimé.\n");
+    printf("Livre supprime.\n");
     return 1;
 }
 
@@ -190,14 +190,14 @@ int gererEmprunt() {
         }
 
         if (bibliotheque.livres[livreIndex].estEmprunte) {
-            printf("Ce livre est déjà emprunté.\n");
+            printf("Ce livre est déjà emprunte.\n");
             return 0;
         }
 
         char eleve[MAX_CHAR];
         char date[11];
 
-        printf("Nom de l'élève: ");
+        printf("Nom de l'eleve: ");
         fgets(eleve, MAX_CHAR, stdin);
         eleve[strcspn(eleve, "\n")] = 0;
 
@@ -212,7 +212,7 @@ int gererEmprunt() {
         strcpy(nouvelEmprunt.date, date);
         bibliotheque.emprunts[bibliotheque.nombreEmprunts++] = nouvelEmprunt;
 
-        printf("Livre emprunté avec succès.\n");
+        printf("Livre emprunte avec succes.\n");
         return 1;
 
     } else if (choix == 2) {
@@ -230,17 +230,17 @@ int gererEmprunt() {
         }
 
         if (livreIndex == -1) {
-            printf("Livre non trouvé.\n");
+            printf("Livre non trouve.\n");
             return 0;
         }
 
         if (!bibliotheque.livres[livreIndex].estEmprunte) {
-            printf("Ce livre n'est pas emprunté.\n");
+            printf("Ce livre n'est pas emprunte.\n");
             return 0;
         }
 
         bibliotheque.livres[livreIndex].estEmprunte = false;
-        printf("Livre retourné avec succès.\n");
+        printf("Livre retourne avec succes.\n");
         return 1;
 
     } else {
