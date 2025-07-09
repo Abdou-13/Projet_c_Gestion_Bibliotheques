@@ -120,7 +120,6 @@ void rechercherLivre() {
     system("pause");
     system("cls");
 }
-=======
 void afficherStatistiques() {
     system("cls");
     system("color 6");
@@ -142,6 +141,5 @@ void afficherStatistiques() {
      system("pause");
     system("cls");
 }
-=======
  
  
