@@ -3,7 +3,7 @@ int supprimerLivre() {
     system("cls");
     system("color 5");
     int isbn;
-    printf("Entrez le code ISBN du livre à supprimer: ");
+    printf("Entrez le code ISBN du livre a supprimer: ");
     scanf("%d", &isbn);
     getchar();
 
