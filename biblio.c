@@ -17,6 +17,4 @@ void afficherLivres() {
     if (trouves == 0)
         printf("Aucun livre disponible.\n");
 
-    system("pause");
-    system("cls");
-}
+  
