@@ -1,20 +1,24 @@
-void afficherLivres() {
+
+void afficherStatistiques() {
     system("cls");
-    system("color B");
-   int trouves = 0;
-    printf("\n=== Livres disponibles ===\n");
+    system("color 6");
+    int totalLivres = bibliotheque.nombreLivres;
+    int livresEmpruntes = 0;
+
     for (int i = 0; i < bibliotheque.nombreLivres; i++) {
-        if (!bibliotheque.livres[i].estEmprunte) {
-            printf("%d. %s - %s (%d) [ISBN: %d]\n",
-                   i + 1,
-                   bibliotheque.livres[i].titre,
-                   bibliotheque.livres[i].auteur,
-                   bibliotheque.livres[i].anneePublication,
-                   bibliotheque.livres[i].ISBN);
-            trouves++;
+        if (bibliotheque.livres[i].estEmprunte) {
+            livresEmpruntes++;
         }
     }
-    if (trouves == 0)
-        printf("Aucun livre disponible.\n");
 
-  
+    printf("\n=== Statistiques de la Bibliotheque ===\n");
+    printf("Total de livres: %d\n", totalLivres);
+    printf("Livres empruntes: %d\n", livresEmpruntes);
+    printf("Livres disponibles: %d\n", totalLivres - livresEmpruntes);
+    printf("Nombre total d'emprunts enregistres: %d\n", bibliotheque.nombreEmprunts);
+
+     system("pause");
+    system("cls");
+}
+=======
+ 
