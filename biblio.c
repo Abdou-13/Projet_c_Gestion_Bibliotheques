@@ -1,10 +1,10 @@
+<
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
 #define MAX_LIVRES 100
 #define MAX_CHAR 100
 #define MAX_EMPRUNTS 100
-
 struct Livre {
     char titre[MAX_CHAR];
     char auteur[MAX_CHAR];
@@ -121,3 +121,28 @@ void rechercherLivre() {
     system("pause");
     system("cls");
 }
+=======
+void afficherStatistiques() {
+    system("cls");
+    system("color 6");
+    int totalLivres = bibliotheque.nombreLivres;
+    int livresEmpruntes = 0;
+
+    for (int i = 0; i < bibliotheque.nombreLivres; i++) {
+        if (bibliotheque.livres[i].estEmprunte) {
+            livresEmpruntes++;
+        }
+    }
+
+    printf("\n=== Statistiques de la Bibliotheque ===\n");
+    printf("Total de livres: %d\n", totalLivres);
+    printf("Livres empruntes: %d\n", livresEmpruntes);
+    printf("Livres disponibles: %d\n", totalLivres - livresEmpruntes);
+    printf("Nombre total d'emprunts enregistres: %d\n", bibliotheque.nombreEmprunts);
+
+     system("pause");
+    system("cls");
+}
+=======
+ 
+ 
