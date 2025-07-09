@@ -259,9 +259,9 @@ void afficherStatistiques() {
         }
     }
 
-    printf("\n=== Statistiques de la Bibliothèque ===\n");
+    printf("\n=== Statistiques de la Bibliotheque ===\n");
     printf("Total de livres: %d\n", totalLivres);
     printf("Livres empruntés: %d\n", livresEmpruntes);
     printf("Livres disponibles: %d\n", totalLivres - livresEmpruntes);
-    printf("Nombre total d'emprunts enregistrés: %d\n", bibliotheque.nombreEmprunts);
+    printf("Nombre total d'emprunts enregistres: %d\n", bibliotheque.nombreEmprunts);
 }
