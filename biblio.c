@@ -1,3 +1,4 @@
+
 int supprimerLivre() {
     system("cls");
     system("color 5");
@@ -28,6 +29,4 @@ int supprimerLivre() {
     printf("Livre supprime.\n");
     return 1;
 
-    system("pause");
-    system("cls");
-}
+ 
