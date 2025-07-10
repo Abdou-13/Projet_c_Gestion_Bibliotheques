@@ -59,12 +59,12 @@ void enregistrerLivre() {
     fgets(nouveauLivre.titre, MAX_CHAR, stdin);
     nouveauLivre.titre[strcspn(nouveauLivre.titre, "\n")] = 0;
 
-    printf("Auteur: ");
+    printf("Auteur:");
     fgets(nouveauLivre.auteur, MAX_CHAR, stdin);
     nouveauLivre.auteur[strcspn(nouveauLivre.auteur, "\n")] = 0;
 
     do {
-        printf("Annee de publication: ");
+        printf("Annee de publication:");
         scanf("%d", &nouveauLivre.anneePublication);
     } while (nouveauLivre.anneePublication < 1000 || nouveauLivre.anneePublication > 2025);
 
@@ -258,7 +258,7 @@ void afficherStatistiques() {
             livresEmpruntes++;
         }
     }
-
+ 
     printf("\n=== Statistiques de la Bibliotheque ===\n");
     printf("Total de livres: %d\n", totalLivres);
     printf("Livres empruntés: %d\n", livresEmpruntes);
