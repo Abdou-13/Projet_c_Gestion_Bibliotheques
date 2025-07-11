@@ -12,11 +12,11 @@ int main()
         scanf("%d", &choix);
         getchar();
 
-        switch(choix) {
+        switch(choix){
             case 1: enregistrerLivre();
                break;
             case 2: afficherLivres();
-               break;
+               break
             case 3: rechercherLivre();
                break;
             case 4: supprimerLivre();
