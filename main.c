@@ -15,7 +15,7 @@ int main()
         switch(choix){
             case 1: enregistrerLivre();
                break;
-            case 2: afficherLivres();
+            case 2: afficherLivre();
                break
             case 3: rechercherLivre();
                break;
@@ -25,7 +25,8 @@ int main()
                break;
             case 6: afficherStatistiques();
                break;
-            case 0: printf("Merci d'avoir utilise notre bibliotheque!!\n"); break;
+            case 0: printf("Merci d'avoir utilise notre bibliotheque!!\n");
+             break;
             default: printf("Choix invalide.\n");
         }
     } while(choix != 0);
