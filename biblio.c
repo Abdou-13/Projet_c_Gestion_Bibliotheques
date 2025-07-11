@@ -6,28 +6,28 @@
 #define MAX_EMPRUNTS 100
 
 struct Livre{
-    char titre[MAX_CHAR];
-    char auteur[MAX_CHAR];
-    int anneePublication;
-   int ISBN ;
-    bool estEmprunte;
-};
+char titre[MAX_CHAR];
+char auteur[MAX_CHAR];
+int anneePublication;
+int ISBN;
+bool estEmprunte;
+]
 
 struct Emprunt{
-    int ISBN;
-    char eleve[MAX_CHAR];
-    char date[11];
-};
+int ISBN;
+char eleve[MAX_CHAR];
+char date[11];
+}
 
 struct Bibliotheque{
-    struct Livre livres[MAX_LIVRES];
-    struct Emprunt emprunts[MAX_EMPRUNTS];
-    int nombreLivres;
-    int nombreEmprunts;
-};
+    struct Livre livres[MAX_LIVRES]
+    struct Emprunt emprunts[MAX_EMPRUNTS]
+    int nombreLivres
+    int nombreEmprunts
+}
 
 
-struct Bibliotheque bibliotheque = { .nombreLivres = 0, .nombreEmprunts = 0 };
+struct Bibliotheque bibliotheque = { .nombreLivres = 0, .nombreEmprunts = 0 }
 void afficherMenu(){
     printf("\n");
     printf("\033[1;34m.-----------------------------------------.\033[0m\n");
